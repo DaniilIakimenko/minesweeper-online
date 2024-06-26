@@ -1,0 +1,44 @@
+#body>* {
+    position: absolute;
+    width: 100%;
+}
+
+#body>:not(:has(>:checked)) {
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* section {
+    display: flex;
+    justify-content: center;
+} */
+
+form {
+    margin: auto;
+    width: max-content;
+}
+
+input {
+    border: 1px solid #000;
+    width: 100px;
+}
+
+button {
+    background-color: #ddd;
+}
+
+output {
+    padding: 4px;
+}
+
+#board {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+#board td {
+    width: 16px;
+    height: 16px;
+}

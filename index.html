@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="tiles.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="temp.css" />
+
+    <script src="app.js" type="module"></script>
+    <script src="js/board.js" type="module"></script>
+
+    <title>Сапер</title>
+  </head>
+
+  <body id="body">
+    <section>
+      <input type="radio" name="mode" id="form-mode" hidden checked />
+
+      <form action="javascript:" id="new-game-form">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Ширина</th>
+              <th>Высота</th>
+              <th>Мины</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label>
+                  <input 
+                    type="radio" 
+                    name="difficulty" 
+                    value="9x9/10" 
+                  />
+                  Новичок
+                </label>
+              </td>
+              <td>9</td>
+              <td>9</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input
+                    type="radio"
+                    name="difficulty"
+                    value="16x16/40"
+                    checked
+                  />
+                  Продвинутый
+                </label>
+              </td>
+              <td>16</td>
+              <td>16</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input 
+                    type="radio" 
+                    name="difficulty" 
+                    value="16x13/99" 
+                  />
+                  Эксперт
+                </label>
+              </td>
+              <td>30</td>
+              <td>16</td>
+              <td>99</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input id="custom-difficulty-radio" type="radio" name="difficulty" value="30x20/100" />
+                  Произвольная
+                </label>
+              </td>
+              <td>
+                <input id="width-input" type="number" name="width" min="7" max="" value="30" />
+              </td>
+              <td>
+                <input id="height-input" type="number" name="height" min="7" max="" value="20" />
+              </td>
+              <td>
+                <input id="mine-count-input" type="number" name="mines" min="4" max="" value="100" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button>
+          <label for="game-mode">Начать новую игру</label>
+        </button>
+      </form>
+    </section>
+
+    <main>
+      <input type="radio" name="mode" id="game-mode" hidden checked! />
+
+      <header>
+        <output id="mine-counter">888</output>
+        <button id="restart-btn">
+          <label for="form-mode">Начать заново</label>
+        </button>
+        <output id="timer">000</output>
+      </header>
+
+      <table id="board">
+        <tbody></tbody>
+      </table>
+      </div>
+    </main>
+  </body>
+</html>
